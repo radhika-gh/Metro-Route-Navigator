@@ -4,7 +4,7 @@ const stations = {
   "Botanical_Garden~B": { "Noida_Sector_62~B": 8, "Yamuna_Bank~B": 10 },
   "Yamuna_Bank~B": {
     "Botanical_Garden~B": 10,
-    "Vaishali~B": 8,
+    "Vaishali~R": 8,
     "Rajiv_Chowk~BY": 6,
   },
   "Rajiv_Chowk~BY": {
@@ -13,7 +13,7 @@ const stations = {
     "AIIMS~Y": 7,
     "New_Delhi~YO": 1,
   },
-  "Vaishali~B": { "Yamuna_Bank~B": 8 },
+  "Vaishali~R": { "Yamuna_Bank~B": 8 },
   "Moti_Nagar~B": {
     "Rajiv_Chowk~BY": 9,
     "Janak_Puri_West~BO": 7,
@@ -94,13 +94,28 @@ function reconstructPath(previous, source, destination) {
 
 function findShortestTime(source, destination) {
   const result = findShortestDistance(source, destination);
-  document.getElementById("output").innerText = `Shortest time: ${
+  document.getElementById("output").innerText = `Minimum time: ${
     result.distance
-  } minutes\nPath: ${result.path.join(" -> ")}`;
+  } minutes`;
 }
 
 function getFare(distance) {
-  return distance * 1; // Placeholder: fare calculation logic
+  if (distance <= 5) {
+    return 10; // fare for up to 5 km
+  } else if (distance <= 10) {
+    return 20; // fare for 5-10 km
+  } else if (distance <= 15) {
+    return 30; // fare for 10-15 km
+  } else if (distance <= 30) {
+    return 45; // fare for 10-15 km
+  } else if (distance <= 50) {
+    return 70; // fare for 10-15 km
+  } else if (distance <= 70) {
+    return 100; // fare for 10-15 km
+  }
+  else {
+    return 150; // fare for more than 15 km
+  }
 }
 
 function handleOption() {
@@ -111,9 +126,9 @@ function handleOption() {
   switch (option) {
     case "shortestDistance":
       const shortestDistanceResult = findShortestDistance(source, destination);
-      document.getElementById("output").innerText = `Shortest distance: ${
-        shortestDistanceResult.distance
-      } KM\n\nPath: ${shortestDistanceResult.path.join(" -> ")}`;
+      document.getElementById(
+        "output"
+      ).innerText = `Shortest distance: ${shortestDistanceResult.distance} KM`;
       break;
     case "shortestTime":
       findShortestTime(source, destination);
@@ -133,9 +148,9 @@ function handleOption() {
       const shortestPathTimeResult = findShortestDistance(source, destination);
       document.getElementById(
         "output"
-      ).innerText = `Shortest path (time): ${shortestPathTimeResult.path.join(
+      ).innerText = `Shortest path : ${shortestPathTimeResult.path.join(
         " -> "
-      )}\nTime: ${shortestPathTimeResult.distance} minutes`;
+      )}`;
       break;
     case "fareDistance":
       const fareDistanceResult = findShortestDistance(source, destination);
@@ -145,14 +160,7 @@ function handleOption() {
         fareDistanceResult.distance
       )} INR`;
       break;
-    case "fareTime":
-      const fareTimeResult = findShortestDistance(source, destination);
-      document.getElementById(
-        "output"
-      ).innerText = `Fare for shortest path (time): ${getFare(
-        fareTimeResult.distance
-      )} INR`;
-      break;
+    
     default:
       document.getElementById("output").innerText = "Invalid option.";
   }
