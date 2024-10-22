@@ -82,5 +82,5 @@ button:hover {
     max-width: 80%; /* Ensure the image fits within the container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin:250px
+    margin:250px;
 }
