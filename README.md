@@ -4,7 +4,7 @@ Metro Route Navigator is a web application designed to help users find the short
 ## Table of Contents
 
 - [Features](#features)
-- [Tech Stack](#techstack)
+- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
