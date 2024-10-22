@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #cbe4ff;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -14,7 +14,7 @@ h1 {
 }
 
 .form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -23,12 +23,13 @@ h1 {
 }
 
 .container {
-    background-color: white;
+    background-color: rgb(173, 204, 251);
     padding: 60px;
+    margin-left : 120px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: 500px;
     position: absolute;
     left: 50px; /* Adjust this value to change the x position */
 }
@@ -36,6 +37,8 @@ h1 {
 label {
     display: block;
     margin-bottom: 10px;
+    font-size :23px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 select,
@@ -45,18 +48,19 @@ button {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
+    
 }
 
 button {
-    background-color: #007bff;
+    background-color: #6687f6;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #584df2;
 }
 
 #output {
@@ -64,6 +68,8 @@ button:hover {
     padding: 10px;
     border-radius: 4px;
     background-color: #fff;
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .image-container {
     position: relative; /* Change from absolute to relative */
@@ -73,7 +79,8 @@ button:hover {
 }
 
 .image-container img {
-    max-width: 100%; /* Ensure the image fits within the container */
+    max-width: 80%; /* Ensure the image fits within the container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:250px
 }
