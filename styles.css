@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    background-color: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    left: 50px; /* Adjust this value to change the x position */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.image-container {
+    position: relative; /* Change from absolute to relative */
+    margin-left: 580px; /* Adjust this value to change the x position of the image container */
+    margin-top: 0px; /* Adjust this value to change the y position of the image container */
+    margin-right: 10px; /* Adjust this value if needed */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

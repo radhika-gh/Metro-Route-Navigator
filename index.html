@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metro Navigation System</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Metro Navigation System</h1>
+        <div class="form">
+
+            <label for="options">Select an Option:</label>
+            <select id="options">
+                <!-- <option value="listStations">List All Stations</option> -->
+                <!-- <option value="showMap">Show Metro Map</option> -->
+                <option value="shortestDistance">Get Shortest Distance</option>
+                <option value="shortestTime">Get Shortest Time</option>
+                <!-- <option value="shortestPathDistance">Get Shortest Path (Distance)</option> -->
+                <option value="shortestPathTime">Get Shortest Path (Time)</option>
+                <option value="fareDistance">Get Fare (Distance)</option>
+                <option value="fareTime">Get Fare (Time)</option>
+                <!-- <option value="exit">Exit</option> -->
+            </select>
+
+            <label for="source">Source Station:</label>
+            <select id="source">
+                <option value="Noida_Sector_62~B">Noida Sector 62</option>
+                <option value="Botanical_Garden~B">Botanical Garden</option>
+                <option value="Yamuna_Bank~B">Yamuna Bank</option>
+                <option value="Rajiv_Chowk~BY">Rajiv Chowk</option>
+                <option value="Vaishali~B">Vaishali</option>
+                <option value="Moti_Nagar~B">Moti Nagar</option>
+                <option value="Janak_Puri_West~BO">Janak Puri West</option>
+                <option value="Dwarka_Sector_21~B">Dwarka Sector 21</option>
+                <option value="Huda_City_Center~Y">Huda City Center</option>
+                <option value="Saket~Y">Saket</option>
+                <option value="Vishwavidyalaya~Y">Vishwavidyalaya</option>
+                <option value="Chandni_Chowk~Y">Chandni Chowk</option>
+                <option value="New_Delhi~YO">New Delhi</option>
+                <option value="AIIMS~Y">AIIMS</option>
+                <option value="Shivaji_Stadium~O">Shivaji Stadium</option>
+                <option value="DDS_Campus~O">DDS Campus</option>
+                <option value="IGI_Airport~O">IGI Airport</option>
+                <option value="Rajouri_Garden~BP">Rajouri Garden</option>
+                <option value="Netaji_Subhash_Place~PR">Netaji Subhash Place</option>
+                <option value="Punjabi_Bagh_West~P">Punjabi Bagh West</option>
+                <!-- Add other stations as options -->
+            </select>
+            
+            <label for="destination">Destination Station:</label>
+            <select id="destination">
+                <option value="Noida_Sector_62~B">Noida Sector 62</option>
+                <option value="Botanical_Garden~B">Botanical Garden</option>
+                <option value="Yamuna_Bank~B">Yamuna Bank</option>
+                <option value="Rajiv_Chowk~BY">Rajiv Chowk</option>
+                <option value="Vaishali~B">Vaishali</option>
+                <option value="Moti_Nagar~B">Moti Nagar</option>
+                <option value="Janak_Puri_West~BO">Janak Puri West</option>
+                <option value="Dwarka_Sector_21~B">Dwarka Sector 21</option>
+                <option value="Huda_City_Center~Y">Huda City Center</option>
+                <option value="Saket~Y">Saket</option>
+                <option value="Vishwavidyalaya~Y">Vishwavidyalaya</option>
+                <option value="Chandni_Chowk~Y">Chandni Chowk</option>
+                <option value="New_Delhi~YO">New Delhi</option>
+                <option value="AIIMS~Y">AIIMS</option>
+                <option value="Shivaji_Stadium~O">Shivaji Stadium</option>
+                <option value="DDS_Campus~O">DDS Campus</option>
+                <option value="IGI_Airport~O">IGI Airport</option>
+                <option value="Rajouri_Garden~BP">Rajouri Garden</option>
+                <option value="Netaji_Subhash_Place~PR">Netaji Subhash Place</option>
+                <option value="Punjabi_Bagh_West~P">Punjabi Bagh West</option>
+                <!-- Add other stations as options -->
+            </select>
+            
+            <button onclick="handleOption()">Submit</button>
+        </div>
+        
+        <div id="output"></div>
+    </div>
+    <div class="image-container">
+        <img src="color_map.png" alt="Metro Map">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
