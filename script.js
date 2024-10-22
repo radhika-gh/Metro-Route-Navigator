@@ -101,20 +101,20 @@ function findShortestTime(source, destination) {
 
 function getFare(distance) {
   if (distance <= 5) {
-    return 10; // fare for up to 5 km
+    return 10; 
   } else if (distance <= 10) {
-    return 20; // fare for 5-10 km
+    return 20; 
   } else if (distance <= 15) {
-    return 30; // fare for 10-15 km
+    return 30; 
   } else if (distance <= 30) {
-    return 45; // fare for 10-15 km
+    return 45; 
   } else if (distance <= 50) {
-    return 70; // fare for 10-15 km
+    return 70; 
   } else if (distance <= 70) {
-    return 100; // fare for 10-15 km
+    return 100; 
   }
   else {
-    return 150; // fare for more than 15 km
+    return 150; 
   }
 }
 
